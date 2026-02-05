@@ -38,7 +38,8 @@ const Location = () => {
                 <i className="bi bi-telephone-fill icon-phone"></i>
                 <p><strong>Teléfonos:</strong></p>
                 {/* Teléfonos centralizados */}
-                <span className="phone-number">{COMPANY_DATA.phone.display}</span>
+                <span className="phone-number">{COMPANY_DATA.phone.whatsapp}</span>
+                <span className="phone-number">{COMPANY_DATA.phone.primary}</span>
                 <span className="phone-number">{COMPANY_DATA.phone.secondary}</span>
               </div>
             </div>
