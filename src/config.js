@@ -8,9 +8,9 @@ export const COMPANY_DATA = {
   // Datos de contacto
   phone: {
     primary: "(0297) 4067292", // Cómo se ve en pantalla
-    raw: "542974067292",       // El número para el link de WhatsApp
+    raw: "542974528061",       // El número para el link de WhatsApp
     secondary: "(0297) 4442837",
-    whatsapp: "(0297) 154359320"
+    whatsapp: "(0297) 4528061"
   },
 
   // Redes Sociales y Mapas
@@ -26,6 +26,6 @@ export const COMPANY_DATA = {
   messages: {
     order: "¡Hola Kuuii! Quisiera realizar un pedido de agua/hielo en mi dirección...",
     general: "Hola, tengo una consulta sobre sus servicios.",
-    webVisit: "¡Hola! Estoy viendo su web y quiero hacer un pedido"
+    order: "¡Hola Kuuii! Quisiera realizar un pedido de agua/hielo en mi dirección..."
   }
 };
