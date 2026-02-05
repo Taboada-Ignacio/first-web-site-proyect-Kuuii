@@ -1,0 +1,145 @@
+/* Hero.css */
+
+.hero-section {
+    width: 100%;
+    padding-top: 10px; 
+    display: flex;
+    justify-content: center;
+}
+
+/* --- CLASE DE ANIMACIÓN --- */
+.hero-content-animate {
+    animation: fadeInEntrance 1.2s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-hero-principal {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    filter: none; 
+}
+
+.hero-title {
+    color: #333;
+    font-weight: 700;
+    margin-top: 5px;
+    font-size: 2rem;
+}
+
+.hero-slogan {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.hero-location {
+    font-size: 1.1rem;
+    color: #0056b3;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-location i {
+    color: #ff4d4d; /* Color rojo para el icono de ubicación */
+}
+
+/* --- BOTÓN WHATSAPP --- */
+.btn-pedido-whatsapp {
+    background-color: #25D366 !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 10px 20px !important; 
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: white !important;
+    
+    display: flex !important; 
+    align-items: center;
+    justify-content: flex-start; /* Icono al inicio */
+    
+    width: 100%;
+    max-width: 380px; /* Ancho máximo para que no sea gigante */
+    margin: 10px auto 0; 
+    
+    white-space: nowrap;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3) !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+}
+
+.btn-pedido-whatsapp i {
+    font-size: 2.2rem; /* Icono un poco más grande */
+    margin-right: 10px; 
+    display: flex;
+    align-items: center;
+}
+
+.btn-pedido-whatsapp span {
+    flex-grow: 1; /* El texto toma el espacio central */
+    text-align: center;
+    padding-right: 30px; /* Compensa el ancho del icono para centrar el texto */
+}
+
+.btn-pedido-whatsapp:hover {
+    background-color: #1ebe57 !important;
+    transform: scale(1.03);
+}
+
+/* --- KEYFRAMES --- */
+@keyframes fadeInEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- RESPONSIVE UNIFICADO --- */
+@media (max-width: 768px) {
+    .logo-hero-principal {
+        max-width: 85%;
+    }
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    .btn-pedido-whatsapp {
+        max-width: 320px;
+        font-size: 1.1rem !important;
+    }
+    .btn-pedido-whatsapp span {
+        padding-right: 25px;
+    }
+}
+
+.hero-location-link {
+    text-decoration: none; /* Quita el subrayado */
+    transition: transform 0.3s ease;
+}
+
+.hero-location {
+    font-size: 1.1rem;
+    color: #0056b3; /* Un azul profesional que combine con el agua */
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-location-link:hover .hero-location {
+    color: #003d82; /* Se oscurece un poco al pasar el mouse */
+    text-decoration: underline; /* Opcional: subraya solo al pasar el mouse */
+}
+
+.hero-location i {
+    color: #ff4d4d; /* El icono de GPS en rojo para que resalte */
+}

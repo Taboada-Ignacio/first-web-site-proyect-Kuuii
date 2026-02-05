@@ -1,0 +1,123 @@
+/* App.css */
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  margin: 0 auto;
+  
+  /* FONDO: Blanco sólido hasta el 55% para cubrir logo, slogan y ubicación */
+  background: linear-gradient(180deg, 
+    #ffffff 0%,     
+    #ffffff 55%,    
+    #f0f8ff 85%,    
+    #e3f2fd 100%    
+  );
+  
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Secciones transparentes */
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: transparent !important;
+  padding: 40px 0; /* Padding reducido para acercar secciones */
+}
+
+/* --- ESPACIO ELIMINADO PARA PRODUCTOS --- */
+
+.services-title {
+  margin-bottom: 0 !important; /* Quitamos el margen inferior */
+  font-weight: 700;
+  color: #333;
+  width: 100%;
+}
+
+.services-container {
+  margin-top: 0 !important; /* Quitamos el margen superior de los cuadrados */
+  padding-bottom: 40px;
+}
+
+/* Estilos base */
+.container-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.logo-estilizado {
+  width: 250px;
+  height: auto;
+  filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.1));
+}
+
+@media (max-width: 768px) {
+  .services-title {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* 1. Solución para que el Hero no quede tapado al cargar la página */
+.App {
+  /* Empujamos todo el sitio hacia abajo el equivalente a la altura de la barra */
+  /* Como agrandamos el logo, la barra ahora mide unos 115px aprox */
+  padding-top: 120px; 
+  
+  /* Resto de tu CSS original... */
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  margin: 0 auto;
+  background: linear-gradient(180deg, 
+    #ffffff 0%,     
+    #ffffff 55%,    
+    #f0f8ff 85%,    
+    #e3f2fd 100%    
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* 2. Solución "Mágica" para los botones del menú (Productos, Ubicación) */
+/* Esto hace que al hacer clic, el navegador frene ANTES de llegar al título */
+#inicio, #productos, #ubicacion, #contacto {
+    scroll-margin-top: 130px; /* Un poco más que la altura de la barra */
+}
+
+/* Resto de tu CSS original... */
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* FORZAR ANCHO COMPLETO EN LOS CONTENEDORES DE SECCIÓN */
+/* Esto arregla que el fondo azul del footer (y otras secciones) llegue hasta los bordes */
+#inicio, 
+#productos, 
+#contacto {
+  width: 100%;
+  display: flex;       /* Asegura que el contenido interno se maneje bien */
+  flex-direction: column;
+  align-items: center; /* Mantiene el centrado interno de los elementos */
+}

@@ -1,0 +1,105 @@
+/* FloatingInvite.css */
+
+.floating-link {
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+.floating-container {
+    position: fixed;
+    bottom: 40px; 
+    right: 30px;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    z-index: 2000;
+    transition: transform 0.3s ease;
+    /* Reducimos la intensidad de la flotación */
+    animation: floatVertical 5s ease-in-out infinite;
+}
+
+.floating-container:hover {
+    transform: scale(1.1);
+}
+
+.invite-bubble-overlay {
+    background-color: #ff0000;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    margin-right: -15px; 
+    position: relative;
+    z-index: 10; 
+    animation: pulseBubble 3s infinite;
+}
+
+.invite-bubble-overlay::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #ff0000;
+}
+
+.mascot-wrapper {
+    width: 140px; 
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; 
+    border: 5px solid white;
+    border-radius: 50%;
+    overflow: hidden; 
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(227, 242, 253, 0.4);
+    animation: glowEffect 4s infinite alternate;
+}
+
+.mascot-img-new {
+    width: 105%;
+    height: 105%;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* --- ANIMACIONES SUAVIZADAS --- */
+
+/* Flotación más corta (5px) y más lenta (5s) */
+@keyframes floatVertical {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* Brillo más sutil */
+@keyframes glowEffect {
+    0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+    100% { box-shadow: 0 0 20px rgba(0, 86, 179, 0.3); }
+}
+
+/* Latido de texto más lento */
+@keyframes pulseBubble {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .mascot-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+    .invite-bubble-overlay {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        margin-right: -10px;
+    }
+}
