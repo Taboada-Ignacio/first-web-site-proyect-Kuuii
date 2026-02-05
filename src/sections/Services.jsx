@@ -53,7 +53,7 @@ const Services = () => {
                       className="service-img" 
                     />
                   </div>
-                  <Card.Title className="fw-bold">{prod.titulo}</Card.Title>
+                  <Card.Title as="h3" className="fw-bold">{prod.titulo}</Card.Title>
                   <Card.Text>{prod.descripcion}</Card.Text>
                   <span className="badge-detalle">{prod.detalle}</span>
                 </Card.Body>

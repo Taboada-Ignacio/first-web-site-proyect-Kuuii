@@ -1,8 +1,9 @@
-/* Services.css ACTUALIZADO PARA IMÁGENES */
+/* Services.css - COMPLETO (Sin rotación de imagen) */
 
 .services-section {
-    padding: 80px 0; /* Un poco más de aire */
+    padding: 80px 0;
     width: 100%;
+    background-color: #f9fbfd; 
 }
 
 .services-title {
@@ -10,17 +11,20 @@
     font-weight: 700;
     color: #333;
     font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+/* --- TARJETAS --- */
 .service-card {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 86, 179, 0.1); /* Borde más sutil */
+    background: rgba(255, 255, 255, 0.95); /* Un poco más blanco para más limpieza */
+    border: 1px solid rgba(0, 86, 179, 0.1);
     border-radius: 20px;
     transition: all 0.3s ease;
-    max-width: 350px;
+    max-width: 350px; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     padding: 20px 10px;
+    height: 100%; 
 }
 
 .service-card:hover {
@@ -29,41 +33,55 @@
     border-color: rgba(0, 86, 179, 0.3);
 }
 
-/* --- NUEVO CSS PARA LAS IMÁGENES --- */
-
-/* Contenedor para centrar la imagen */
+/* --- IMÁGENES DE PRODUCTOS --- */
 .service-icon-container {
     margin-bottom: 25px;
-    /* Opcional: si tus imágenes no tienen sombra, puedes agregar una sutil aquí */
-    /* filter: drop-shadow(0 4px 6px rgba(0, 86, 179, 0.2)); */
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* La clase para la etiqueta <img> */
 .service-img {
-    height: 120px; /* ALTURA FIJA: Ajusta este valor según tus imágenes */
-    width: auto;  /* Mantiene la proporción */
-    object-fit: contain; /* Asegura que la imagen entera se vea dentro del espacio */
+    height: 90px; 
+    width: auto;
+    object-fit: contain;
     transition: transform 0.3s ease;
+    /* Sombra suave para que la imagen se despegue de la tarjeta */
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
 }
 
-/* Mantenemos el efecto de que crezca al pasar el mouse */
+/* CORRECCIÓN AQUÍ: Solo escala, NO rota */
 .service-card:hover .service-img {
-    transform: scale(1.1);
+    transform: scale(1.08); 
 }
 
-/* ------------------------------------ */
+/* --- TEXTOS --- */
+.card-title {
+    color: #213547;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.card-text {
+    color: #555; /* Un gris un poco más oscuro para mejor lectura */
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* --- ETIQUETA (BADGE) CON BUEN CONTRASTE --- */
+.badge-detalle {
+    background-color: #e3f2fd; 
+    color: #003d82; /* Azul oscuro aprobado por Google */
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-top: auto; 
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(0, 61, 130, 0.1);
+}
 
 .services-row {
     margin-top: 10px;
-}
-
-.badge-detalle {
-    background-color: #e3f2fd;
-    color: #0056b3;
-    padding: 8px 18px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-top: 20px;
-    letter-spacing: 0.5px;
 }

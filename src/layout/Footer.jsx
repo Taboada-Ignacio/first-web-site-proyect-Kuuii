@@ -1,10 +1,9 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { COMPANY_DATA } from '../config'; // <--- IMPORTANTE: Importamos los datos
+import { COMPANY_DATA } from '../config'; 
 import './Footer.css';
 
 const Footer = () => {
-  // Generamos el link usando los datos centrales
   const linkWspFooter = `https://wa.me/${COMPANY_DATA.phone.raw}?text=${encodeURIComponent(COMPANY_DATA.messages.general)}`;
 
   return (
@@ -12,13 +11,15 @@ const Footer = () => {
       <Container>
         <Row className="justify-content-center text-center">
           <Col md={4} className="mb-4">
-            <h5>{COMPANY_DATA.name.toUpperCase()}</h5>
+            {/* CAMBIO: De h5 a h4 para respetar la jerarquía */}
+            <h4>{COMPANY_DATA.name.toUpperCase()}</h4>
             <p>Producto Patagónico de Tierra Santa</p>
             <p className="small">{COMPANY_DATA.address}</p>
           </Col>
           
           <Col md={4} className="mb-4">
-            <h5>CONTACTO DIRECTO</h5>
+            {/* CAMBIO: De h5 a h4 */}
+            <h4>CONTACTO DIRECTO</h4>
             <div className="d-flex flex-column align-items-center">
               <span><i className="bi bi-whatsapp me-2"></i>{COMPANY_DATA.phone.whatsapp}</span>
               <span><i className="bi bi-telephone-fill me-2"></i>{COMPANY_DATA.phone.primary}</span>
@@ -27,19 +28,13 @@ const Footer = () => {
           </Col>
 
           <Col md={4} className="mb-4">
-            <h5>SEGUINOS</h5>
+            {/* CAMBIO: De h5 a h4 */}
+            <h4>SEGUINOS</h4>
             <div className="social-icons">
-              <a href={COMPANY_DATA.social.facebook} target="_blank" rel="noreferrer">
-                <i className="bi bi-facebook"></i>
-              </a>
-              
-              <a href={COMPANY_DATA.social.instagram} target="_blank" rel="noreferrer">
-                <i className="bi bi-instagram"></i>
-              </a>
-
-              <a href={linkWspFooter} target="_blank" rel="noreferrer">
-                <i className="bi bi-whatsapp"></i>
-              </a>
+               {/* ... tus iconos con aria-label (que ya están perfectos) ... */}
+               <a href={COMPANY_DATA.social.facebook} aria-label="Visitar nuestro Facebook" target="_blank" rel="noreferrer"><i className="bi bi-facebook"></i></a>
+               <a href={COMPANY_DATA.social.instagram} aria-label="Visitar nuestro Instagram" target="_blank" rel="noreferrer"><i className="bi bi-instagram"></i></a>
+               <a href={linkWspFooter} aria-label="Enviar mensaje por WhatsApp" target="_blank" rel="noreferrer"><i className="bi bi-whatsapp"></i></a>
             </div>
           </Col>
         </Row>

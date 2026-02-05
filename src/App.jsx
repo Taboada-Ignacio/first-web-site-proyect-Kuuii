@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 // Importamos los componentes
-import Navigation from './layout/Navigation'; // <--- NUEVO
+import Navigation from './layout/Navigation'; 
 import Hero from './sections/Hero';
 import Services from './sections/Services';
 import Location from './sections/Location';
@@ -12,20 +12,25 @@ import FloatingInvite from './components/FloatingInvite';
 function App() {
   return (
     <div className="App">
-      <Navigation /> {/* <--- La barra va arriba de todo */}
+      {/* 1. Header/Nav: Se queda afuera del main */}
+      <Navigation /> 
+      
+      {/* 2. PUNTO 3 SOLUCIONADO: Etiqueta <main> envolviendo el contenido */}
+      <main>
+          <div id="inicio">
+            <Hero />
+          </div>
+          
+          <div id="productos">
+            <Services />
+          </div>
+          
+          {/* Location va dentro del flujo principal */}
+          <Location /> 
+      </main>
+
+      {/* 3. Elementos auxiliares y Footer: Se quedan afuera del main */}
       <FloatingInvite />
-      
-      {/* Agregamos IDs para que el menú funcione */}
-      <div id="inicio">
-        <Hero />
-      </div>
-      
-      <div id="productos">
-        <Services />
-      </div>
-      
-      {/* Location ya tenía id="ubicacion" internamente, pero lo reforzamos aquí o usamos el suyo */}
-      <Location /> 
       
       <div id="contacto">
         <Footer />

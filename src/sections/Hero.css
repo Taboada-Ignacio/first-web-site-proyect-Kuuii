@@ -1,10 +1,12 @@
-/* Hero.css */
+/* Hero.css - EL ORIGINAL, pero optimizado para Lighthouse */
 
 .hero-section {
     width: 100%;
     padding-top: 10px; 
     display: flex;
     justify-content: center;
+    /* Aseguramos fondo blanco limpio por si acaso */
+    background-color: #fff; 
 }
 
 /* --- CLASE DE ANIMACIÓN --- */
@@ -26,7 +28,7 @@
 }
 
 .hero-title {
-    color: #333;
+    color: #333; /* Gris oscuro, buen contraste */
     font-weight: 700;
     margin-top: 5px;
     font-size: 2rem;
@@ -34,19 +36,40 @@
 
 .hero-slogan {
     font-style: italic;
-    color: #666;
+    /* CAMBIO SUTIL: De #666 a #555 para pasar el test de accesibilidad */
+    color: #555; 
     margin-bottom: 20px;
+}
+
+.hero-location-link {
+    text-decoration: none; 
+    transition: transform 0.3s ease;
+    display: inline-block; /* Mejor comportamiento del link */
 }
 
 .hero-location {
     font-size: 1.1rem;
-    color: #0056b3;
-    font-weight: 500;
+    /* CAMBIO SUTIL: Azul apenas más oscuro para mejor lectura */
+    color: #004494; 
+    font-weight: 600; /* Un poco más gordita la letra ayuda a leer */
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-location-link:hover .hero-location {
+    color: #002a5c; 
+    text-decoration: underline; 
+}
+
+.hero-location-link:hover {
+    transform: scale(1.02); /* Pequeño efecto al pasar el mouse */
 }
 
 .hero-location i {
-    color: #ff4d4d; /* Color rojo para el icono de ubicación */
+    color: #d63031; /* Rojo un poco más oscuro para contraste */
+    margin-right: 5px; /* Separar un poco el icono del texto */
 }
 
 /* --- BOTÓN WHATSAPP --- */
@@ -61,10 +84,10 @@
     
     display: flex !important; 
     align-items: center;
-    justify-content: flex-start; /* Icono al inicio */
+    justify-content: flex-start; 
     
     width: 100%;
-    max-width: 380px; /* Ancho máximo para que no sea gigante */
+    max-width: 380px; 
     margin: 10px auto 0; 
     
     white-space: nowrap;
@@ -74,21 +97,23 @@
 }
 
 .btn-pedido-whatsapp i {
-    font-size: 2.2rem; /* Icono un poco más grande */
+    font-size: 2.2rem; 
     margin-right: 10px; 
     display: flex;
     align-items: center;
 }
 
 .btn-pedido-whatsapp span {
-    flex-grow: 1; /* El texto toma el espacio central */
+    flex-grow: 1; 
     text-align: center;
-    padding-right: 30px; /* Compensa el ancho del icono para centrar el texto */
+    padding-right: 30px; 
 }
 
 .btn-pedido-whatsapp:hover {
     background-color: #1ebe57 !important;
     transform: scale(1.03);
+    /* Agregamos una sombra un poco más fuerte al hover */
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5) !important;
 }
 
 /* --- KEYFRAMES --- */
@@ -118,28 +143,4 @@
     .btn-pedido-whatsapp span {
         padding-right: 25px;
     }
-}
-
-.hero-location-link {
-    text-decoration: none; /* Quita el subrayado */
-    transition: transform 0.3s ease;
-}
-
-.hero-location {
-    font-size: 1.1rem;
-    color: #0056b3; /* Un azul profesional que combine con el agua */
-    font-weight: 500;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-location-link:hover .hero-location {
-    color: #003d82; /* Se oscurece un poco al pasar el mouse */
-    text-decoration: underline; /* Opcional: subraya solo al pasar el mouse */
-}
-
-.hero-location i {
-    color: #ff4d4d; /* El icono de GPS en rojo para que resalte */
 }
