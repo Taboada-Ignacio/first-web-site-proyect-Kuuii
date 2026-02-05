@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { COMPANY_DATA } from '../config'; // <--- Importamos los datos centrales
-import logoPrincipal from '../assets/logo-kuuii-2-sin fondo.png'; 
+import logoPrincipal from '../assets/logo-kuuii-2-sin fondo.jpg'; 
 import './Hero.css';
 
 const Hero = () => {

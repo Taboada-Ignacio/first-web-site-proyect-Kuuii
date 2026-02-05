@@ -1,7 +1,7 @@
 import React from 'react';
 import { COMPANY_DATA } from '../config'; // <--- Importamos la configuración
 import './FloatingInvite.css';
-import mascot from '../assets/muñeco-kuuii-circular.png'; 
+import mascot from '../assets/muñeco-kuuii-circular.jpg'; 
 
 const FloatingInvite = () => {
   // Generamos el enlace usando el número raw y el mensaje de "visita web"

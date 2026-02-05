@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import logo from '../assets/logo-kuuii-marca.png'; 
+import logo from '../assets/logo-kuuii-marca.jpg'; 
 import './Navigation.css';
 
 const Navigation = () => {

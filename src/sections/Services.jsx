@@ -4,9 +4,9 @@ import './Services.css';
 
 // --- IMPORTANTE: REEMPLAZA ESTOS NOMBRES POR LOS DE TUS IMÁGENES REALES ---
 // Asegúrate de que las imágenes estén en la carpeta src/assets/
-import imgAgua from '../assets/icono-agua.png';     // <-- Tu imagen para agua
-import imgHielo from '../assets/icono-hielo.png';   // <-- Tu imagen para hielo
-import imgPremium from '../assets/icono-premium.png'; // <-- Tu imagen para calidad
+import imgAgua from '../assets/icono-agua.jpg';     // <-- Tu imagen para agua
+import imgHielo from '../assets/icono-hielo.jpg';   // <-- Tu imagen para hielo
+import imgPremium from '../assets/icono-premium.jpg'; // <-- Tu imagen para calidad
 
 const Services = () => {
   const productos = [
