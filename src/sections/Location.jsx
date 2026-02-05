@@ -4,7 +4,7 @@ import { COMPANY_DATA } from '../config';
 import './Location.css'; 
 
 // IMPORTANTE: Asegurate de tener esta imagen en assets
-import mapCover from '../assets/mapa-cover.webp'; 
+import mapCover from '../assets/mapa-cover.jpg'; 
 
 const Location = () => {
   // Estado para el truco del mapa (Facade Pattern)
