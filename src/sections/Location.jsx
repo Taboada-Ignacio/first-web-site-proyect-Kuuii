@@ -53,9 +53,11 @@ const Location = () => {
                 height="450" 
                 className="google-map-iframe"
                 allowFullScreen="" 
+                // AGREGA ESTAS DOS LÍNEAS:
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                title={`Ubicación de ${COMPANY_DATA.name}`}
+                
+                title="Ubicación Kuuii" // (Esto también ayuda a accesibilidad)
               ></iframe>
             </div>
           </Col>

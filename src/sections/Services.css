@@ -1,4 +1,4 @@
-/* Services.css - COMPLETO (Sin rotación de imagen) */
+/* Services.css - COMPLETO Y CORREGIDO */
 
 .services-section {
     padding: 80px 0;
@@ -17,14 +17,16 @@
 
 /* --- TARJETAS --- */
 .service-card {
-    background: rgba(255, 255, 255, 0.95); /* Un poco más blanco para más limpieza */
+    background: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(0, 86, 179, 0.1);
     border-radius: 20px;
     transition: all 0.3s ease;
     max-width: 350px; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    padding: 20px 10px;
+    padding: 20px 15px; /* Un poco más de padding lateral */
     height: 100%; 
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen bien */
 }
 
 .service-card:hover {
@@ -33,27 +35,31 @@
     border-color: rgba(0, 86, 179, 0.3);
 }
 
-/* --- IMÁGENES DE PRODUCTOS --- */
+/* --- CORRECCIÓN DE IMÁGENES (Anti-Solapamiento) --- */
 .service-icon-container {
-    margin-bottom: 25px;
-    height: 100px; 
+    margin-bottom: 20px;
+    
+    /* Usamos min-height en vez de height fijo para evitar que se monten */
+    min-height: 120px; 
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .service-img {
-    height: 90px; 
-    width: auto;
-    object-fit: contain;
+    /* Límites para que la imagen no se descontrole */
+    max-height: 110px; 
+    max-width: 100%;   
+    
+    object-fit: contain; 
     transition: transform 0.3s ease;
-    /* Sombra suave para que la imagen se despegue de la tarjeta */
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
 }
 
-/* CORRECCIÓN AQUÍ: Solo escala, NO rota */
 .service-card:hover .service-img {
-    transform: scale(1.08); 
+    transform: scale(1.08); /* Solo zoom, sin rotación */
 }
 
 /* --- TEXTOS --- */
@@ -61,25 +67,31 @@
     color: #213547;
     margin-bottom: 15px;
     font-weight: 700;
+    font-size: 1.25rem;
 }
 
 .card-text {
-    color: #555; /* Un gris un poco más oscuro para mejor lectura */
+    color: #555;
     font-size: 0.95rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Esto hace que el texto ocupe espacio y empuje el botón abajo */
 }
 
-/* --- ETIQUETA (BADGE) CON BUEN CONTRASTE --- */
+/* --- ETIQUETA (BADGE) CON ALTO CONTRASTE --- */
 .badge-detalle {
     background-color: #e3f2fd; 
-    color: #003d82; /* Azul oscuro aprobado por Google */
+    
+    /* COLOR OSCURO PARA PASAR LIGHTHOUSE (Accesibilidad 100) */
+    color: #002a5c; 
+    
     padding: 8px 18px;
     border-radius: 50px;
     font-size: 0.85rem;
     font-weight: 700;
-    margin-top: auto; 
+    align-self: center; /* Centra la etiqueta en la tarjeta */
+    margin-top: auto;   /* La empuja al final de la tarjeta */
     letter-spacing: 0.5px;
-    border: 1px solid rgba(0, 61, 130, 0.1);
+    border: 1px solid rgba(0, 42, 92, 0.15);
 }
 
 .services-row {
