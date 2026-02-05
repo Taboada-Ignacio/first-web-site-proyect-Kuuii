@@ -26,6 +26,6 @@ export const COMPANY_DATA = {
   messages: {
     order: "¡Hola Kuuii! Quisiera realizar un pedido de agua/hielo en mi dirección...",
     general: "Hola, tengo una consulta sobre sus servicios.",
-    order: "¡Hola Kuuii! Quisiera realizar un pedido de agua/hielo en mi dirección..."
+    webVisit: "¡Hola Kuuii! Quisiera realizar un pedido de agua/hielo en mi dirección..."
   }
 };
