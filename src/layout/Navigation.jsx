@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import logo from '../assets/logo-kuuii-marca1.png'; 
+import logo from '../assets/logo-kuuii-marca1.webp'; 
 import './Navigation.css';
 
 const Navigation = () => {
@@ -52,10 +52,13 @@ const Navigation = () => {
           href="#inicio" 
           onClick={(e) => handleSmoothScroll(e, '#inicio')}
         >
+          {/* CAMBIO: Agregamos width y height para evitar CLS */}
           <img
             src={logo}
             alt="Kuuii Logo"
             className="navbar-brand-logo"
+            width="188"
+            height="126"
           />
         </Navbar.Brand>
 
