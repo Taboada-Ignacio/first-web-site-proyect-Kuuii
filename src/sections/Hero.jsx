@@ -20,6 +20,7 @@ const Hero = () => {
               className="logo-hero-principal"
               width="188"
               height="126"
+              fetchPriority="high"  // <--- AGREGA ESTA LÍNEA
             />
             
             <h1 className="hero-title">Agua de Mesa Purificada</h1>

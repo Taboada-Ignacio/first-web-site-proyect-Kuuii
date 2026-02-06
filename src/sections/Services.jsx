@@ -48,8 +48,8 @@ const Services = () => {
                       src={prod.imagenSrc} 
                       alt={prod.titulo} 
                       className="service-img"
-                      width="94"
-                      height="63"
+                      width="154"
+                      height="103"
                     />
                   </div>
                   
