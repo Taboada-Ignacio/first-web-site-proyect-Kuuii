@@ -1,0 +1,13 @@
+# Permitir el acceso a todos los bots de búsqueda
+User-agent: *
+Allow: /
+
+# Bloquear bots de IA que consumen recursos (Opcional pero recomendado en 2026)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+# Ubicación del Sitemap (Clave para Google Search Console)
+Sitemap: https://first-web-site-proyect-kuuii.pages.dev/sitemap.xml
